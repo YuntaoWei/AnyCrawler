@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AnyCrawler</string>
+
+    <string name="drag_up_tip">Pull to refresh</string>
+
+    <string name="drag_down_tip"></string>
+</resources>

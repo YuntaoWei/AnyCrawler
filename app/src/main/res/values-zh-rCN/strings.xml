@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">抓图</string>
+
+    <string name="drag_up_tip">"上拉刷新"</string>
+
+    <string name="drag_down_tip">""</string>
+</resources>
