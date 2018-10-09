@@ -48,6 +48,10 @@ public class Site {
 
     private boolean disableCookieManagement = false;
 
+    private String certificateLocation;
+
+    private char[] certificatePassword;
+
     static {
         DEFAULT_STATUS_CODE_SET.add(HttpConstant.StatusCode.CODE_200);
     }
@@ -330,6 +334,22 @@ public class Site {
     public Site setDisableCookieManagement(boolean disableCookieManagement) {
         this.disableCookieManagement = disableCookieManagement;
         return this;
+    }
+
+    public void setCertificateFileLocation(String location) {
+        certificateLocation = location;
+    }
+
+    public String getCertificateFileLocation() {
+        return certificateLocation;
+    }
+
+    public void setCertificatePassword(char[] password) {
+        certificatePassword = password;
+    }
+
+    public char[] getCertificatePassword() {
+        return certificatePassword;
     }
 
     public Task toTask() {

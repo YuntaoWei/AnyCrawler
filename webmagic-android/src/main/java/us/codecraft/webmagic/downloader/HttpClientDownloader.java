@@ -112,7 +112,6 @@ public class HttpClientDownloader extends AbstractDownloader {
         try {
             Response rsp = call.execute();
             data = new String(rsp.body().bytes(), "gb2312");
-            LogPrinter.i("ttt", data);
         } catch (IOException e) {
             e.printStackTrace();
         }
