@@ -8,12 +8,12 @@ Android废弃了Httpclient导致直接使用webmagic会有冲突，无法运行�
 # 使用方式
 
 allprojects {
-		repositories {
-			...
-			maven {
-        url 'https://jitpack.io'
-      }
-		}
+    repositories {
+        ...
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
 }
 
 implementation 'com.github.YuntaoWei:AnyCrawler:-SNAPSHOT'
