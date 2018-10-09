@@ -16,4 +16,6 @@ allprojects {
     }
 }
 
-implementation 'com.github.YuntaoWei:AnyCrawler:-SNAPSHOT'
+dependencies {
+	        implementation 'com.github.YuntaoWei:AnyCrawler:1.0'
+	}
