@@ -317,9 +317,7 @@ public class Spider implements Runnable, Task {
             if(pause) {
                 synchronized (obj) {
                     try {
-                        LogPrinter.i("ttt", "pause task!");
                         obj.wait();
-                        LogPrinter.i("ttt", "resume task!");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -421,9 +419,7 @@ public class Spider implements Runnable, Task {
     }
 
     private void processRequest(Request request) {
-        LogPrinter.i("ttt", "processRequest : " + request.getUrl());
         Page page = downloader.download(request, this);
-        LogPrinter.i("ttt", "processRequest success " + page.getStatusCode() + "   " + page.isDownloadSuccess());
         if (page.isDownloadSuccess()){
             onDownloadSuccess(request, page);
         } else {

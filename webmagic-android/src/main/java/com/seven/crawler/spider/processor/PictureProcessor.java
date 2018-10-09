@@ -22,9 +22,10 @@ public class PictureProcessor extends BaseProcessor {
 
     @Override
     public void processContent(Page page) {
-        LogPrinter.i(TAG, "PictureProcessor processContent!");
         List<String> pages = page.getHtml().links().all();
         page.addTargetRequests(pages);
+        page.putField(HOST, page.getRequest().getUrl());
+        page.putField(TITLE, page.getHtml().xpath(TITLE_XPATH).all());
         page.putField(CrawlType.PIC.toString(),
                 new FilterList().filterAddAll(page.getHtml().xpath(TextUtils.isEmpty(xpath) ? PIC_XPATH : xpath).all()));
     }

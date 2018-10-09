@@ -8,6 +8,7 @@ import java.util.List;
 
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
+import us.codecraft.webmagic.utils.LogPrinter;
 
 public abstract class PicDownLoader extends BaseDownloader {
 
@@ -16,9 +17,11 @@ public abstract class PicDownLoader extends BaseDownloader {
     @Override
     public void process(ResultItems resultItems, Task task) {
         List<String> picUrls = resultItems.get(CrawlType.PIC.toString());
-        startDownLoad(picUrls);
+        List<String> title = resultItems.get("Title");
+        String url = resultItems.get("Host");
+        startDownLoad(picUrls, title, url);
     }
 
-    public abstract void startDownLoad(List<String> urls);
+    public abstract void startDownLoad(List<String> urls, List<String> pageTitle, String pageUrl);
 
 }

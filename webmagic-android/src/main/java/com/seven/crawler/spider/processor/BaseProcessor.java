@@ -6,6 +6,11 @@ import us.codecraft.webmagic.processor.PageProcessor;
 
 public abstract class BaseProcessor implements PageProcessor {
 
+    final  String HOST = "Host";
+    final String TITLE = "Title";
+
+    String TITLE_XPATH = "[@class='title']";
+
     String xpath;
 
     public BaseProcessor(String xpath) {
