@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
+import android.util.LogPrinter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,7 @@ public class DemoActivity extends AppCompatActivity {
         task.setCrawlerConfiguration(crawler);
         task.setDownLoader(new PicDownLoader() {
             @Override
-            public void startDownLoad(List<String> urls) {
+            public void startDownLoad(List<String> urls, List<String> title, String url) {
                 imgUrls.addAll(urls);
                 if(imgUrls.size() > LOAD_LIMITE)
                     task.pause();

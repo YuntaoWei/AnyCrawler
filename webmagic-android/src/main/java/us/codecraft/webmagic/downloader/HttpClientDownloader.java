@@ -149,7 +149,6 @@ public class HttpClientDownloader extends AbstractDownloader {
             }
             page.setCharset(charset);
             String data = new String(bytes, charset);
-            LogPrinter.i("ttt", "got data : " + data);
             page.setRawText(data);
         }
         page.setUrl(new PlainText(request.getUrl()));

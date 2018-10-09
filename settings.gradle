@@ -1,1 +1,1 @@
-include ':app', ':webmagic-android', ':picshow'
+include ':app', ':webmagic-android'
