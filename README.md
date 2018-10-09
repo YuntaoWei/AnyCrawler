@@ -17,5 +17,5 @@ allprojects {
 }
 
 dependencies {
-	        implementation 'com.github.YuntaoWei:AnyCrawler:Tag'
+	        implementation 'com.github.YuntaoWei:AnyCrawler:1.0'
 	}
