@@ -1,9 +1,9 @@
 package com.seven.crawler.spider;
 
 
-import com.seven.crawler.spider.downloader.AllContentProcesser;
+import com.seven.crawler.spider.processor.AllContentProcesser;
 import com.seven.crawler.spider.downloader.BaseDownloader;
-import com.seven.crawler.spider.downloader.TextContentProcesser;
+import com.seven.crawler.spider.processor.TextContentProcesser;
 import com.seven.crawler.spider.processor.PictureProcessor;
 
 import us.codecraft.webmagic.Spider;

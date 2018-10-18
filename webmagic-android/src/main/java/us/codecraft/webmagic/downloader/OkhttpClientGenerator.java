@@ -86,6 +86,12 @@ public class OkhttpClientGenerator {
         return cBuilder.build();
     }
 
+    /**
+     * SSL认证
+     * @param certificateFile 本地证书文件
+     * @param pas 密码
+     * @return
+     */
     private SSLSocketFactory createSSLVerifier(String certificateFile, char[] pas) {
         File f = new File(certificateFile);
         SSLContext sslContext = null;
@@ -120,6 +126,10 @@ public class OkhttpClientGenerator {
         return sslContext.getSocketFactory();
     }
 
+    /**
+     * 无证书，默认的SSL验证。
+     * @return
+     */
     private SSLSocketFactory createDefaultSSLVerifier() {
         SSLContext sslContext = null;
         try {
@@ -134,6 +144,10 @@ public class OkhttpClientGenerator {
         return sslContext.getSocketFactory();
     }
 
+    /**
+     * 509信任
+     * @return
+     */
     private X509TrustManager createTrustManager() {
         try {
             TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(
@@ -150,6 +164,9 @@ public class OkhttpClientGenerator {
         }
     }
 
+    /**
+     * 拦截器
+     */
     private static class CacheInterceptor implements Interceptor {
 
         @Override

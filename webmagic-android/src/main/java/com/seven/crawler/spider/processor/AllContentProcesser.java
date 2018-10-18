@@ -1,12 +1,13 @@
-package com.seven.crawler.spider.downloader;
+package com.seven.crawler.spider.processor;
+
 
 
 import com.seven.crawler.spider.processor.BaseProcessor;
 
 import us.codecraft.webmagic.Page;
 
-public class TextContentProcesser extends BaseProcessor {
-    public TextContentProcesser(String xpath) {
+public class AllContentProcesser extends BaseProcessor {
+    public AllContentProcesser(String xpath) {
         super(xpath);
     }
 
